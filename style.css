@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap");
+
+button,
+input[type="submit"],
+input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+* {
+	--light: #3a4655;
+	--dark: #374352;
+	--red: #cf5953;
+	--gray: #9ba2a4ac;
+	font-family: "Roboto Mono", monospace;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #cbe3e3;
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.calc {
+	display: flex;
+	background-color: var(--light);
+	flex-direction: column;
+	width: 80vw;
+	max-width: 400px;
+	height: 120vh;
+	min-height: 700px;
+	max-height: 600px;
+	box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+		rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+		rgba(0, 0, 0, 0.09) 0px 32px 16px;
+	border: 5px solid var(--light);
+	border-radius: 10px;
+}
+
+.nav {
+	position: relative;
+	display: flex;
+	background-color: var(--light);
+	height: 5%;
+	align-items: baseline;
+	color: white;
+	font-size: 0.8rem;
+	font-weight: 100;
+}
+
+.wifi {
+	position: absolute;
+	left: 5px;
+}
+
+.icon {
+	width: 20px;
+}
+
+.wifi-icon {
+	position: relative;
+
+	bottom: -6px;
+}
+
+.time {
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+
+.battery {
+	position: absolute;
+	right: 5px;
+	width: 30px;
+}
+
+.screen {
+	display: flex;
+	background-color: var(--light);
+	height: 30%;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-end;
+	padding-right: 20px;
+	font-weight: 100;
+	flex-wrap: wrap;
+}
+
+.history {
+	font-size: 1.5rem;
+	color: var(--gray);
+}
+
+.result {
+	font-size: 4rem;
+	font-weight: 100;
+	color: white;
+}
+
+.button-container {
+	height: 65%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: baseline;
+	height: 100%;
+	text-align: center;
+}
+
+.btn {
+	border: 1px solid var(--light);
+	padding-top: 26px;
+	width: 25%;
+	height: 100%;
+	background-color: var(--dark);
+	font-size: 2rem;
+	transition-duration: 0.05s;
+}
+
+.btn:hover {
+	background-color: #3a4655;
+}
+
+.btn:active {
+	margin-top: 5px;
+	border-bottom-width: 0px;
+	background-color: var(--dark);
+}
+
+.number {
+	font-weight: 300;
+	color: white;
+}
+
+.symbol {
+	font-weight: 200;
+	color: var(--gray);
+}
+
+.reset {
+	color: var(--red);
+}
+
+.button-item {
+	border: none;
+	text-decoration: none;
+}
