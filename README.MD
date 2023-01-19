@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/BahnMiFPS/">
-    <img src="images/logo.png" alt="Logo">
+    <img src="images/logo.png" alt="Logo" width="150">
   </a>
 
   <h3 align="center">Calculator</h3>
