@@ -25,10 +25,12 @@ const setOperands = (num) => {
 	if (!operator) {
 		num1 += num
 		bigDisplay.innerHTML = num1
-	} else {
+	} else if (operator) {
 		num2 += num
 		bigDisplay.innerHTML = num2
 		whichNum = true
+	} else if (operator && num2) {
+		calculate()
 	}
 }
 
@@ -45,6 +47,7 @@ const opString = (op) => {
 			break
 		case "multiply":
 			operatorDisplay = "×"
+			break
 		case "percentage":
 			operatorDisplay = "%"
 		default:
@@ -54,6 +57,12 @@ const opString = (op) => {
 // Operation
 
 const setOperator = (newOperator) => {
+	if (!num1) {
+		num1 = 0
+	}
+
+	if (!num1 && !num2) return
+
 	if (operator) {
 		operator = newOperator
 		calculate()
@@ -83,7 +92,8 @@ const calculate = () => {
 			break
 		case "multiply":
 			result = parseFloat(num1) * parseFloat(num2)
-			operatorDisplay = "×"
+			operatorDisplay = "x"
+			break
 		case "percentage":
 			result = parseFloat(num1) % parseFloat(num2)
 			operatorDisplay = "%"
@@ -105,6 +115,9 @@ const reset = () => {
 	bigDisplay.innerHTML = ""
 	smallDisplay.innerHTML = ""
 	onResult = false
+	currentNum = ""
+	whichNum = false
+	resultValue = ""
 }
 
 const deleteButton = () => {
@@ -119,4 +132,5 @@ const deleteButton = () => {
 		num2 = currentNum
 	}
 	bigDisplay.innerHTML = currentNum
+	console.log(num1, num2)
 }
